@@ -1,0 +1,49 @@
+import os
+import random
+import hashlib
+
+# 1. Hardcoded Password (Security Issue)
+password = "admin123"
+
+# 2. Weak Random Number Generation
+otp = random.randint(1000, 9999)
+
+# 3. Weak Hashing Algorithm
+user_password = "mypassword"
+hashed_password = hashlib.md5(user_password.encode()).hexdigest()
+
+# 4. Unused Variable
+unused_variable = 100
+
+# 5. Unnecessary Import
+import math
+
+# 6. Poor Exception Handling
+try:
+    number = int(input("Enter a number: "))
+    result = 100 / number
+except:
+    print("Something went wrong")
+
+# 7. Insecure Command Execution
+def run_command(command):
+    os.system(command)
+
+# 8. Function with No Proper Input Validation
+def calculate_age(age):
+    return age + 10
+
+# 9. Duplicate Code
+def add_numbers(a, b):
+    return a + b
+
+def sum_values(a, b):
+    return a + b
+
+# 10. Missing Documentation
+def greet(name):
+    print("Hello " + name)
+
+print("Password:", password)
+print("Generated OTP:", otp)
+print("Hashed Password:", hashed_password)
